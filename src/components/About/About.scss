@@ -1,0 +1,116 @@
+@import "../../styles/globals";
+
+.about {
+    display: flex;
+
+    span {
+        font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+}
+
+.about__mission {
+    width: 62%;
+    padding-right: 30px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 35px;
+        padding-right: 0;
+    }
+}
+
+.about__goals {
+    width: 38%;
+    margin-bottom: 0;
+    counter-reset: goalsCounter;
+    box-sizing: border-box;
+
+    ul {
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+
+    li {
+        position: relative;
+        margin-bottom: 30px;
+        padding-left: 70px;
+        list-style: none;
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            @include q-sans-400(20, 23);
+            content: '0'counter(goalsCounter);
+            counter-increment: goalsCounter;
+            display: block;
+            position: absolute;
+            top: 2px;
+            left: 0;
+            padding: 13px;
+            background-color: $turquoise;
+            color: $white1;
+        }
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    a {
+        margin-left: 17px;
+
+        img {
+            width: 18px;
+            height: 18px;
+            vertical-align: top;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &--big a {
+        margin: 0 2px 0 0;
+        padding: 19px;
+        background-color: $grey1;
+
+        img {
+            width: 22px;
+            height: 22px;
+            vertical-align: top;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            background-color: $grey2;
+        }
+
+        @media (max-width: 768px) {
+            padding: 15px;
+        }
+    }
+}

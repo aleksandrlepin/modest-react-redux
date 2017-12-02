@@ -1,0 +1,24 @@
+.promo-section {
+  font: 400 1rem/1.1875rem "Open Sans", sans-serif;
+  background-image: url("./img/bg1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff; }
+
+.promo-section__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 435px; }
+  .promo-section__container p {
+    color: #b4bebd; }
+  @media (max-width: 1024px) {
+    .promo-section__container {
+      min-height: auto; } }
+
+.promo-section__holder {
+  max-width: 60%; }
+  @media (max-width: 768px) {
+    .promo-section__holder {
+      max-width: 100%; } }

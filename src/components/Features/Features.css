@@ -1,0 +1,30 @@
+.features {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  margin: 0 -1.3%;
+  overflow: hidden; }
+  @media (max-width: 480px) {
+    .features {
+      display: block;
+      margin: 0; } }
+
+.features__item {
+  box-sizing: border-box;
+  width: 33.33%;
+  padding: 0 1.3%; }
+  .features__item img {
+    width: 100%;
+    margin-bottom: 52px;
+    vertical-align: top; }
+  .features__item p:last-child {
+    margin-bottom: 0; }
+  @media (max-width: 480px) {
+    .features__item {
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 0; }
+      .features__item img {
+        margin-bottom: 20px; }
+      .features__item:last-child {
+        margin-bottom: 0; } }

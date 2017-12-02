@@ -1,0 +1,33 @@
+@import "../../styles/globals";
+
+.promo-section {
+    @include o-sans-400(16, 19);
+    background-image: url('./img/bg1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: $white1;
+}
+
+.promo-section__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 435px;
+
+    p {
+        color: $white2;
+    }
+
+    @media (max-width: 1024px) {
+        min-height: auto;
+    }
+}
+
+.promo-section__holder {
+    max-width: 60%;
+
+    @media (max-width: 768px) {
+        max-width: 100%;
+    }
+}

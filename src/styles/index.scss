@@ -1,0 +1,122 @@
+@import 'fonts';
+@import 'var';
+@import 'mixins';
+@import 'func';
+
+// RESET STYLES
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    outline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+//GLOBAL STYLES
+
+html {
+    @include o-sans-400(16, 26);
+    color: $grey;
+
+    @media (max-width: 768px) {
+        font-size: px(14);
+    }
+
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    padding-top: 80px;
+    background-color: $white1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container  {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+h1 {
+    @include q-sans-400(36, 39);
+    margin-bottom: 22px;
+    text-transform: uppercase;
+}
+
+.color-section {
+
+    h2 {
+        @include q-sans-400(36, 39);
+        margin-bottom: 63px;
+        padding-left: 15px;
+        border-left: 10px solid $grey2;
+        color: $black2;
+        text-transform: uppercase;
+
+    }
+
+    h3 {
+        @include q-sans-400(16, 19);
+        margin-bottom: 16px;
+        color: $black2;
+        text-transform: uppercase;
+    }
+
+    &--dark {
+        background-color: $dark-slate-grey2;
+
+        h2 {
+            border-color: $grey3;
+            color: $white1;
+        }
+
+        h3 {
+            color: $white1;
+        }
+    }
+}
+
+p {
+    margin-bottom: 35px;
+}
+
+.btn-holder {
+    font-size: 0;
+    line-height: 0;
+
+    &--center {
+        text-align: center;
+    }
+}
+
+.btn {
+    @include q-sans-400(14, 17);
+    display: inline-block;
+    margin-left: 11px;
+    padding: 12px 20px;
+    border: 2px solid $white1;
+    border-radius: 5px;
+    background-color: $transparent;
+    color: $white1;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: top;
+
+    &:hover {
+        border-color: $turquoise;
+        background-color: $turquoise;
+        transition: all .25s ease-out;
+    }
+
+    &:first-of-type {
+        margin-left: 0;
+    }
+}

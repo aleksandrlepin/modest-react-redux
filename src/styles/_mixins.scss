@@ -1,0 +1,19 @@
+@mixin o-sans-400($size, $lheight) {
+    font: 400 #{$size / 16}rem/#{$lheight / 16}rem 'Open Sans', sans-serif;
+}
+
+@mixin o-sans-600($size, $lheight) {
+    font: 600 #{$size / 16}rem/#{$lheight / 16}rem 'Open Sans', sans-serif;
+}
+
+@mixin o-sans-700($size, $lheight) {
+    font: 700 #{$size / 16}rem/#{$lheight / 16}rem 'Open Sans', sans-serif;
+}
+
+@mixin q-sans-400($size, $lheight) {
+    font: 400 #{$size / 16}rem/#{$lheight / 16}rem 'Quattrocento Sans', sans-serif;
+}
+
+@mixin q-sans-700($size, $lheight) {
+    font: 700 #{$size / 16}rem/#{$lheight / 16}rem 'Quattrocento Sans', sans-serif;
+}

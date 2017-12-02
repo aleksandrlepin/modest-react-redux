@@ -1,0 +1,60 @@
+@import "../../styles/globals";
+
+.header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    background-color: $dark-slate-grey1;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 25px 20px;
+
+    img {
+        vertical-align: middle;
+    }
+}
+
+.header__menu {
+    ul {
+      display: flex;
+    }
+
+    li {
+        margin-left: 16px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        @media (max-width: 960px) and (min-width: 769px) {
+            margin-left: 5px;
+        }
+    }
+}
+
+.menu__link {
+    @include o-sans-400(14, 17);
+    padding: 5px 9px;
+    border: 2px solid $transparent;
+    border-radius: 4px;
+    color: $white2;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+        border-color: $white2;
+        transition: all .3s ease-out;
+    }
+
+    &.active {
+        border-color: $turquoise;
+        color: $turquoise;
+    }
+}
