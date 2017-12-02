@@ -1,16 +1,13 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './Header.css';
 import logo from './img/modest.png';
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="header" id="nav">
         <header className="header__container">
-          <a href="#">
+          <a href="#about">
             <img src={logo} alt="Modest logo" />
           </a>
           <nav className="header__menu">

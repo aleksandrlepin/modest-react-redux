@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './Promo.css';
 
 class Promo extends React.Component {

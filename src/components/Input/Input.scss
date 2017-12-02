@@ -1,0 +1,17 @@
+@import "../../styles/globals";
+
+.news-input {
+
+  input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    @extend input;
+    height: 100px;
+    margin-bottom: 0;
+  }
+}

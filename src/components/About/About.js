@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './About.css';
 import facebook from './img/006-facebook-logo.svg';
 import twitter from './img/001-twitter-logo-silhouette.svg';
@@ -19,19 +19,19 @@ class About extends React.Component {
                             <p> Phasellus sollicitudin ante eros ornare, <span> sit amet luctus lorem semper </span>. Suspendisse posuere, quamdictum consectetur, augue metus pharetra tellus, eu feugiatloreg egetnisi. Cras ornare bibendum ante, ut bibendum odio
                                 convallis eget. vel sodalessollicitudin arcu vestibulum </p>
                             <div className="social social--big">
-                                <a href="#">
+                                <a href="/">
                                     <img src={facebook} alt="facebook" />
                                 </a>
-                                <a href="#">
+                                <a href="/">
                                     <img src={twitter} alt="twitter" />
                                 </a>
-                                <a href="#">
+                                <a href="/">
                                     <img src={github} alt="github" />
                                 </a>
-                                <a href="#">
+                                <a href="/">
                                     <img src={dribble} alt="dribble" />
                                 </a>
-                                <a href="#">
+                                <a href="/">
                                     <img src={behance} alt="behance" />
                                 </a>
                             </div>

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './Services.css';
 import cogs from './img/004-cogs.svg';
 import tools from './img/007-tool.svg';

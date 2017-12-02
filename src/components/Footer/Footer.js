@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './Footer.css';
 import twitter from './img/001-twitter-logo-silhouette.svg';
 import facebook from './img/006-facebook-logo.svg';
@@ -13,19 +13,19 @@ class Footer extends React.Component {
                 <div className="container footer">
                     <p>© Copyright 2014 by PSD Booster. All Rights Reserved.</p>
                     <div className="social">
-                        <a href="#">
+                        <a href="/">
                             <img src={twitter} alt="twitter"/>
                         </a>
-                        <a href="#">
+                        <a href="/">
                             <img src={facebook} alt="facebook"/>
                         </a>
-                        <a href="#">
+                        <a href="/">
                             <img src={skype} alt="skype"/>
                         </a>
-                        <a href="#">
+                        <a href="/">
                             <img src={behance} alt="behance"/>
                         </a>
-                        <a href="#">
+                        <a href="/">
                             <img src={linkedin} alt="linkedin"/>
                         </a>
                     </div>

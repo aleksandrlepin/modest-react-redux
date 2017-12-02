@@ -1,0 +1,9 @@
+.news-input input, .news-input textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px; }
+
+.news-input textarea {
+  height: 100px;
+  margin-bottom: 0; }
