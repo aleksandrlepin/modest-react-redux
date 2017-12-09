@@ -67,6 +67,7 @@ h1 {
         @include q-sans-400(16, 19);
         margin-bottom: 16px;
         color: $black2;
+        font-weight: 600;
         text-transform: uppercase;
     }
 

@@ -75,6 +75,7 @@ h1 {
   font: 400 1rem/1.1875rem "Quattrocento Sans", sans-serif;
   margin-bottom: 16px;
   color: #292f36;
+  font-weight: 600;
   text-transform: uppercase; }
 
 .color-section--dark {

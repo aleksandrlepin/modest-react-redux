@@ -1,8 +1,8 @@
-const initialState = {
-  newsCaption: "first news",
-  newsText: "Lorem ipsum dolor sit amet, ac erat dolor quisque magna consectetur leo, pede nec phasellus praesent adipiscing.",
-}
+import { combineReducers } from 'redux';
+import article from './article';
+import user from './user';
 
-export default function articleState(state = initialState) {
-  return state;
-}
+export default combineReducers({
+  article,
+  user,
+});
