@@ -7,8 +7,8 @@ class Output extends React.Component {
   render () {
     const { name } = this.props.user;
     const { addLike } = this.props.likeAction;
-    console.log('Output this = ', this);
-    console.log('Output this.props = ', this.props);
+    // console.log('Output this = ', this);
+    // console.log('Output this.props = ', this.props);
 
     const items = this.props.article.map((item, i) => {
       return (

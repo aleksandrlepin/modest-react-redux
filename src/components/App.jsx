@@ -12,19 +12,20 @@ import Footer from './Footer/Footer';
 import Input from './Input/Input';
 import Output from './Output/Output';
 import * as likeAction from '../action/likeAction';
+import { addNews } from '../action/addNewsAction';
 
 import './App.css';
 
 class App extends React.Component {
     render() {
       console.log('App this = ', this);
-      console.log('App this.props = ', this.props);
-      console.log('App likeAction = ', this.props.likeAction);
+      // console.log('App this.props = ', this.props);
+      // console.log('App likeAction = ', this.props.likeAction);
         return (
             <div id="promo-section">
                 <Header />
                 <main>
-                  <Input />
+                  <Input addNews={this.props.addNews} />
                   <Output article={this.props.article} user={this.props.user} likeAction={this.props.likeAction}/>
                   <Promo />
                   <About />
@@ -47,6 +48,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    addNews: bindActionCreators(addNews, dispatch),
     likeAction: bindActionCreators(likeAction, dispatch)
   }
 }

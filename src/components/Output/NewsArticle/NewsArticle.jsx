@@ -23,13 +23,14 @@ class NewsArticle extends React.Component {
   }
 
   HandleAddLike() {
-    let like = this.props.likes + 1;
-    this.props.addLike(like);
+    const like = this.props.likes;
+    const newsID = this.props.newsID;
+    this.props.addLike(like, newsID);
   }
 
   render () {
-    console.log('NewsArticle this = ', this);
-    console.log('NewsArticle this.props = ', this.props);
+    // console.log('NewsArticle this = ', this);
+    // console.log('NewsArticle this.props = ', this.props);
     const { caption, text, date, likes, name } = this.props;
 
     return (
