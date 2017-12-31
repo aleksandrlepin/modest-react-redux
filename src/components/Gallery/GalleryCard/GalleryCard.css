@@ -1,0 +1,17 @@
+.gallery-card {
+  position: relative;
+  width: 23.5%;
+  margin: 0 2% 20px 0;
+  padding: 10px;
+  border: solid 2px #d0d5d9;
+  border-radius: 5px;
+  box-sizing: border-box; }
+  .gallery-card button {
+    position: absolute;
+    right: 10px;
+    border-color: #8d8f92; }
+  .gallery-card__text {
+    height: 150px;
+    margin-bottom: 10px; }
+  .gallery-card:nth-child(4n) {
+    margin-right: 0; }

@@ -106,7 +106,9 @@ p {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  vertical-align: top; }
+  vertical-align: middle; }
+  .btn--small {
+    padding: 3px 10px; }
   .btn:hover {
     border-color: #23b7a4;
     background-color: #23b7a4;

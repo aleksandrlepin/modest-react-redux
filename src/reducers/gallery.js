@@ -1,42 +1,34 @@
 const initialState = [
   {
-    newsID: 0,
+    cardID: 0,
     caption: "initial news 1",
     text: "Initial text 1. Initial text 1. Initial text 1. Initial text 1. Initial text 1. Initial text 1. Initial text 1. Initial text 1.",
-    date: new Date().toString(),
-    likes: 0,
+    rating: 5,
   },
   {
-    newsID: 1,
+    cardID: 1,
     caption: "initial news 2",
     text: "Initial text 2. Initial text 2. Initial text 2. Initial text 2. Initial text 2. Initial text 2. Initial text 2. Initial text 2.",
-    date: new Date().toString(),
-    likes: 0,
+    rating: 6,
   },
   {
-    newsID: 2,
+    cardID: 2,
     caption: "initial news 3",
     text: "Initial text 3. Initial text 3. Initial text 3. Initial text 3. Initial text 3. Initial text 3. Initial text 3. Initial text 3.",
-    date: new Date().toString(),
-    likes: 0,
+    rating: 3,
   },
 ]
-
-const article = (state = initialState, action) => {
+const gallery = (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_NEWS':
+    case 'ADD_CARD':
+    console.log('ADD_CARD: ');
       return [...state, action.payload ];
-    case 'ADD_LIKE':
-      return state.map((item) => {
-        if (item.newsID === action.payload.newsID) {
-          return {...item, likes: action.payload.likes + 1};
-        }
-        return {...item}
-      });
-
-     default:
+    case 'DELETE_CARD':
+    console.log('DELETE_CARD: ');
+      return state.filter(item => (item.cardID !== action.payload.cardID));
+    default:
       return state;
   }
 }
 
-export default article;
+export default gallery;

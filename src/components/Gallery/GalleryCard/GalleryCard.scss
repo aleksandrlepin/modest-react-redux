@@ -1,0 +1,26 @@
+@import "../../../styles/globals";
+
+.gallery-card {
+  position: relative;
+  width: 23.5%;
+  margin: 0 2% 20px 0;
+  padding: 10px;
+  border: solid 2px $grey2;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  button {
+    position: absolute;
+    right: 10px;
+    border-color: $grey;
+  }
+
+  &__text {
+    height: 150px;
+    margin-bottom: 10px;
+  }
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}

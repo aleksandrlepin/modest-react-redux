@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import article from './article';
-import user from './user';
+import gallery from './gallery';
+import navbarItems from './navbarItems'
 
 export default combineReducers({
-  article,
-  user,
+  gallery,
+  navbarItems,
 });

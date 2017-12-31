@@ -1,8 +1,11 @@
 import React from 'react';
-import './Header.css';
+import { connect } from 'react-redux';
+import Navbar from './Navbar/Navbar';
 import logo from './img/modest.png';
+import './Header.css';
 
 class Header extends React.Component {
+
   render() {
     return (
       <div className="header" id="nav">
@@ -10,21 +13,17 @@ class Header extends React.Component {
           <a href="#about">
             <img src={logo} alt="Modest logo" />
           </a>
-          <nav className="header__menu">
-            <ul>
-              <li><a className="menu__link active" href="#promo-section"> home </a></li>
-              <li><a className="menu__link" href="#about"> about </a></li>
-              <li><a className="menu__link" href="#work"> work </a></li>
-              <li><a className="menu__link" href="#team"> team </a></li>
-              <li><a className="menu__link" href="#services"> services </a></li>
-              <li><a className="menu__link" href="#features"> features </a></li>
-              <li><a className="menu__link" href="#contact"> contact </a></li>
-            </ul>
-          </nav>
+          <Navbar navbarItems={this.props.navbarItems} />
         </header>
       </div>
     );
   }
 }
 
-export default Header;
+const mapStateToProps = state => {
+  return {
+    navbarItems: state.navbarItems
+  }
+}
+
+export default connect(mapStateToProps)(Header);

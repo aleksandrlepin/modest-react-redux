@@ -25,7 +25,7 @@ html {
     color: $grey;
 
     @media (max-width: 768px) {
-        font-size: px(14);
+        font-size: rem(14);
     }
 
 }
@@ -109,7 +109,11 @@ p {
     color: $white1;
     text-decoration: none;
     text-transform: uppercase;
-    vertical-align: top;
+    vertical-align: middle;
+
+    &--small {
+        padding: 3px 10px;
+    }
 
     &:hover {
         border-color: $turquoise;
