@@ -9,7 +9,9 @@ const Navbar = (props) => {
     return (
       <li key={uuid.v4()}>
         <Link
+          id={item.id}
           to={item.path}
+          onClick={() => props.addActive(item.id)}
           className={
             item.active
             ? "menu__link active"
@@ -40,6 +42,7 @@ Navbar.propTypes = {
       active: PropTypes.bool.isRequired,
     })
   ).isRequired,
+  addActive: PropTypes.func.isRequired,
 }
 
 export default Navbar;

@@ -43,7 +43,18 @@ const initialState = [
   },
 ]
 const navbarItems = (state = initialState, action) => {
-  return state;
+  switch(action.type) {
+    case 'ACTIVE_MENU':
+      return state.map(item => {
+        item.active = false;
+        if(item.id === action.payload) {
+          item.active = true;
+        }
+        return item;
+      });
+    default:
+      return state;
+  }
 }
 
 export default navbarItems;
