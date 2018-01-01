@@ -19,6 +19,7 @@ GalleryCard.propTypes = {
   caption: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,
+  deleteCard: PropTypes.func.isRequired,
 }
 
 export default GalleryCard;

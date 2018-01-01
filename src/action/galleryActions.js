@@ -1,10 +1,10 @@
-let nextNewsID = 3;
+let nextCardID = 3;
 
 export const addCard = (caption, text, rating) => {
   return {
     type: 'ADD_CARD',
     payload: {
-      cardID: nextNewsID++,
+      cardID: nextCardID++,
       caption,
       text,
       rating

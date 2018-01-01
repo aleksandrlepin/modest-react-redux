@@ -18,14 +18,13 @@ const initialState = [
     rating: 3,
   },
 ]
+
 const gallery = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_CARD':
-    console.log('ADD_CARD: ');
       return [...state, action.payload ];
     case 'DELETE_CARD':
-    console.log('DELETE_CARD: ');
-      return state.filter(item => (item.cardID !== action.payload.cardID));
+      return state.filter(item => item.cardID !== action.payload);
     default:
       return state;
   }

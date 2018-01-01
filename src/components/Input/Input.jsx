@@ -20,7 +20,7 @@ class Input extends React.Component {
     if (caption.value === '' || text.value === '') {
       return;
     }
-    this.props.addCard(caption.value, text.value, rating.value);
+    this.props.addCard(caption.value, text.value, +rating.value);
     caption.value = '';
     text.value = '';
   }
@@ -57,9 +57,16 @@ class Input extends React.Component {
   }
 }
 
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     addCard: (task) => {
+//       dispatch(addCard(task))
+//     }
+//   }
+// }
 const mapDispatchToProps = (dispatch) => {
   return {
-    addCard: bindActionCreators(addCard, dispatch),
+    addCard: bindActionCreators(addCard, dispatch)
   }
 }
 

@@ -3,26 +3,21 @@ import { connect } from 'react-redux';
 import GalleryCard from './GalleryCard/GalleryCard';
 import { deleteCard } from '../../action/galleryActions';
 import PropTypes from 'prop-types';
-import { bindActionCreators } from 'redux';
+import uuid from 'uuid';
 import './Gallery.css';
 
 class Gallery extends React.Component {
 
-  deleteCardHandler = (cardID) => {
-    console.log('cardID: ', cardID);
-    deleteCard(cardID);
-  }
-
   render () {
-    const items = this.props.gallery.map((item, i) => {
+    const items = this.props.gallery.map((item) => {
       return (
         <GalleryCard
-          key={i}
+          key={uuid.v4()}
           cardID={item.cardID}
           caption={item.caption}
           text={item.text}
           rating={item.rating}
-          deleteCard={() => this.deleteCardHandler(item.cardID)}
+          deleteCard={() => this.props.onDeleteCard(item.cardID)}
         />
       )
     });
@@ -44,17 +39,15 @@ Gallery.propTypes = {
   gallery: PropTypes.array.isRequired
 }
 
-const mapStateToProps = state => {
-  return {
-    gallery: state.gallery,
-  }
-}
+const mapStateToProps = state => ({
+  gallery: state.gallery
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    deleteCard: bindActionCreators(deleteCard, dispatch)
+const mapDispatchToProps = (dispatch) => ({
+  onDeleteCard(cardID) {
+    dispatch(deleteCard(cardID))
   }
-}
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Gallery);
 
